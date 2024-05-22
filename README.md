@@ -2,14 +2,13 @@
 
 ## Overview
 
-vPull is a Python project that implements an analysis of the clinical pull test for testing postural instability in Parkinson's disease. This analysis is based on camera-based markerless 3D tracking of the examined patient.
+vPull is a Python project that implements a vision-based 3D pose tracking for automated clinical pull test analysis in Parkinson's disease and related movement disorders. 
 
 ## Features
 
-- Step detection based on keypoint velocity.
-- Pull detection based on acceleration thresholds.
-- Bending detection based on changes in the angle of keypoints.
-- Configurable filter properties for preprocessing keypoint data.
+- Timing and amplitude of pull execution   
+- Timing and amplitude of stepping response 
+- Amplitude of retropulsion and latency of balance recovery 
 
 ## Installation
 
@@ -51,25 +50,6 @@ vPull is a Python project that implements an analysis of the clinical pull test 
 
 ### `vPull_properties.json`
 This file contains the configuration for the analysis:
-
-```json
-{
-    "step_keypoints": ["left_ankle", "right_ankle"],
-    "step_vel_thr": 0.7,
-    "step_len_thr": 0.05,
-    "step_interval_thr": 3,
-    "pull_keypoints": ["left_shoulder", "right_shoulder"],
-    "pull_baseline": 1.0,
-    "pull_thr": 3,
-    "bending_keypoints": ["left_shoulder", "right_shoulder", "left_hip", "right_hip"],
-    "bending_thr": 0.25,
-    "filter_properties": {
-        "cutoff": 10,
-        "order": 2,
-        "gap_thr": 1
-    }
-}
-```
 
 ### `sample_data.json`
 This file contains the sample keypoint data structured as a 3D array with the following dimensions:
