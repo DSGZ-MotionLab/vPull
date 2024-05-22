@@ -1,0 +1,16 @@
+{
+    "step_keypoints": ["left_ankle", "right_ankle"],
+    "step_vel_thr": 0.7,
+    "step_len_thr": 0.05,
+    "step_interval_thr": 3,
+    "pull_keypoints": ["left_shoulder", "right_shoulder"],
+    "pull_baseline": 1.0,
+    "pull_thr": 3,
+    "bending_keypoints": ["left_shoulder", "right_shoulder", "left_hip", "right_hip"],
+    "bending_thr": 0.25,
+    "filter_properties": {
+        "cutoff": 7,
+        "order": 4,
+        "gap_thr": 0.1
+    }
+}
